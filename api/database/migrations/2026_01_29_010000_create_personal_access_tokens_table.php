@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
 
-            $table->index(['tokenable_type', 'tokenable_id']);
+            $table->index(['tokenable_type', 'tokenable_id'], 'pat_tokenable_lookup_index');
         });
     }
 
